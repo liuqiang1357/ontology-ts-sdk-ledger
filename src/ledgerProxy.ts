@@ -17,9 +17,8 @@
  */
 import { utils } from 'ontology-ts-sdk';
 import { LedgerTransport } from './ledgerTransport';
-import { LedgerTransportNode } from './ledgerTransportNode';
 
-let transportInternal: LedgerTransport = new LedgerTransportNode();
+let transportInternal: any = null;
 
 /**
  * Sets the instance of ledger transport (Node/U2F/IFrame).

@@ -81,6 +81,7 @@ export async function createChannel(forwarderUrl: string, debug: boolean) {
     const promise = new Promise<[MessageChannel, HTMLIFrameElement]>((resolve, reject) => {
         const channel: MessageChannel = new MessageChannel();
         const iframe = document.createElement('iframe');
+        iframe.setAttribute('allow', 'usb');
 
         const ready = (message: any) => {
             if (debug) {

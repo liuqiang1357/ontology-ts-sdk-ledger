@@ -24,4 +24,3 @@ declare module 'elliptic';
 declare module '@ledgerhq/hw-transport-node-hid';
 declare module '@ledgerhq/hw-transport-u2f';
 declare module '@ledgerhq/hw-transport-webusb';
-declare module 'ontology-ts-sdk';

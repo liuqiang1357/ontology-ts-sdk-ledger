@@ -74,7 +74,7 @@ export interface ChannelResponse extends ChannelMessage {
 
 export async function createChannel(debug: boolean) {
     const promise = new Promise<MessageChannel>((resolve, reject) => {
-        const popup = chrome.getViews({ type: 'tab' })[0];
+        const popup = chrome.extension.getViews({ type: 'tab' })[0];
         if (popup == null) {
             throw new Error('Popup in not found');
         }
@@ -101,8 +101,6 @@ export async function createChannel(debug: boolean) {
         channel.port1.start();
 
         popup.postMessage('init', '*', [channel.port2]);
-
-        return channel;
     });
 
     return timeoutFunc(promise, 2000);

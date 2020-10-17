@@ -20,15 +20,9 @@ export class LedgerTransportWebusb implements LedgerTransport {
             throw new Error('Your computer does not support the ledger!');
         }
 
-        const paths = await LedgerNode.list();
-        if (paths.length === 0) {
-            throw new Error('USB Error: No device found.');
-        }
-
-        this.delegate = await LedgerNode.open(paths[0]);
+        this.delegate = await LedgerNode.create();
         this.delegate.setDebugMode(true);
         this.delegate.setScrambleKey('ONT');
-        this.delegate.setExchangeTimeout(5000);
     }
 
     /**

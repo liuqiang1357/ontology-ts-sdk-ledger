@@ -24,6 +24,7 @@ export class LedgerTransportNode implements LedgerTransport {
         this.delegate = await LedgerNode.create();
         this.delegate.setDebugMode(true);
         this.delegate.setScrambleKey(null);
+        this.delegate.setExchangeTimeout(5000);
     }
 
     /**

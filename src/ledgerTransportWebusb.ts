@@ -23,6 +23,7 @@ export class LedgerTransportWebusb implements LedgerTransport {
         this.delegate = await LedgerNode.create();
         this.delegate.setDebugMode(true);
         this.delegate.setScrambleKey('ONT');
+        this.delegate.setExchangeTimeout(5000);
     }
 
     /**

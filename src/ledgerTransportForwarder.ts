@@ -66,10 +66,10 @@ export class LedgerTransportForwarder implements LedgerTransport {
             params,
             data,
             statusList
-        } as ChannelSendParams, 30000);
+        } as ChannelSendParams);
     }
 
-    private async sendToProvider<T extends ChannelMessage>(msg: T, timeoutMs = 2000) {
+    private async sendToProvider<T extends ChannelMessage>(msg: T, timeoutMs = 30000) {
         return timeoutFunc((async () => {
             const response = await this.sendMessage(msg);
             if (response.error) {

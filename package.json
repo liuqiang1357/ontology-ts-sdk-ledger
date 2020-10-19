@@ -1,6 +1,6 @@
 {
   "name": "@ont-dev/ontology-ts-sdk-ledger",
-  "version": "1.0.28-alpha.3",
+  "version": "1.0.28-alpha.8",
   "description": "",
   "main": "./lib/index.js",
   "types": "./lib/types/index.d.ts",
@@ -38,6 +38,7 @@
     "@types/uuid": "^3.4.3",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
@@ -54,9 +55,9 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "@ledgerhq/hw-transport-node-hid": "^4.15.0",
-    "@ledgerhq/hw-transport-u2f": "^4.15.0",
-    "@ledgerhq/hw-transport-webusb": "^4.69.0",
+    "@ledgerhq/hw-transport-node-hid": "^4.78.0",
+    "@ledgerhq/hw-transport-u2f": "^4.78.0",
+    "@ledgerhq/hw-transport-webusb": "^4.78.0",
     "babel-polyfill": "^6.26.0",
     "elliptic": "^6.4.0",
     "ontology-ts-sdk": "^0.9.4",
